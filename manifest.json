@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Bandai Tournament Logger",
+  "version": "1.0",
+  "description": "Extract tournament standings data from Bandai tournament pages",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extract Tournament Data"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
